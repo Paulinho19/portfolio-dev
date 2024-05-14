@@ -1,22 +1,38 @@
-/*==================== toggle icon navbar ====================*/
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', () => {
+    let menuIcon = document.querySelector('#menu-icon')
+    let navbar = document.querySelector('.navbar')
+  
+    menuIcon.onclick = () => {
+      menuIcon.classList.toggle('bx-x')
+      navbar.classList.toggle('active')
+    }
 
+    /*============== efeito ao clicar em links ============== */
 
-/*==================== scroll sections active link ====================*/
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+let sections = document.querySelectorAll('section')
+let navLinks = document.querySelectorAll('header nav a')
 
 window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY
+        let offset = sec.offsetTop - 150
+        let height = sec.offsetHeight
+        let id = sec.getAttribute('id')
 
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active')
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active')
+            })
+        }
+    })
 
-    /*==================== sticky navbar ====================*/
+    /*============== efeito ao clicar em links ============== */
 
-    /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
-};
+    let header = document.querySelector('header')
 
-
-/*==================== scroll reveal ====================*/
-
-
-/*==================== typed js ====================*/
+    header.classList.toggle('sticky', window.scrollY > 100)
+}
+  
+    
+  });
