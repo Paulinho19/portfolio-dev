@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.toggle('active')
     }
 
-    /*============== efeito ao clicar em links ============== */
+
 
 let sections = document.querySelectorAll('section')
 let navLinks = document.querySelectorAll('header nav a')
@@ -27,14 +27,14 @@ window.onscroll = () => {
         }
     })
 
-    /*============== efeito ao clicar em links ============== */
+
 
     let header = document.querySelector('header')
 
     header.classList.toggle('sticky', window.scrollY > 100)
 
 
-    /*============== remover barra de navegação ============== */
+   
 
 
     menuIcon.classList.remove('bx-x')
@@ -51,6 +51,6 @@ window.onscroll = () => {
     ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' })
     ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' })
   
-    const typed = new Typed('.multiple-text', { strings: ['Desenvolvedor FullStack', 'Web Designer', 'Programador de automações'], typeSpeed: 100, backSpeed: 100, backDelay: 1000, loop: true })
+    const typed = new Typed('.multiple-text', { strings: ['Desenvolvedor Front End', 'Desenvolvedor Back End', 'Desenvolvedor Web'], typeSpeed: 100, backSpeed: 100, backDelay: 1000, loop: true })
     
   });
