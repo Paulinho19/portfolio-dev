@@ -51,6 +51,6 @@ window.onscroll = () => {
     ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' })
     ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' })
   
-    const typed = new Typed('.multiple-text', { strings: ['Desenvolvedor Front End', 'Desenvolvedor Back End', 'Desenvolvedor Web'], typeSpeed: 100, backSpeed: 100, backDelay: 1000, loop: true })
+    const typed = new Typed('.multiple-text', { strings: ['Desenvolvedor Web ', 'Desenvolvedor Back End', 'Desenvolvedor Front End'], typeSpeed: 100, backSpeed: 100, backDelay: 1000, loop: true })
     
   });
